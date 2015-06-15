@@ -4,16 +4,15 @@
 // If you really don't know how to do this... Run `node getserver.js URL`.
 // Fill in the URL of the client where `URL` is.
 // For example: `node getserver.js http://example-server.psim.us/`
-exports.server = 'sim.psim.us';
+exports.server = 'cbc.pokecommunity.com';
 exports.port = 8000;
-
 // This is the server id.
 // To know this one, you should check where the AJAX call 'goes' to when you
 // log in.
 // For example, on the Smogon server, it will say somewhere in the URL
 // ~~showdown, meaning that the server id is 'showdown'.
 // If you really don't know how to check this... run the said script above.
-exports.serverid = 'showdown';
+exports.serverid = 'pokecommunity';
 
 // The nick and password to log in with
 // If no password is required, leave pass empty
@@ -22,7 +21,7 @@ exports.pass = '';
 
 // The rooms that should be joined.
 // Joining Smogon's Showdown's Lobby is not allowed.
-exports.rooms = ['example room name', 'another example'];
+exports.rooms = ['lobby'];
 
 // Any private rooms that should be joined.
 // Private rooms will be moderated differently (since /warn doesn't work in them).
@@ -70,7 +69,7 @@ exports.debuglevel = 3;
 
 // Users who can use all commands regardless of their rank. Be very cautious
 // with this, especially on servers other than main.
-exports.excepts = [];
+exports.excepts = ['anrindeoavis','yashagarwal'];
 
 // Whitelisted users are those who the bot will not enforce moderation for.
 exports.whitelist = [];
@@ -97,10 +96,10 @@ exports.allowmute = false;
 // rulebreakers. Spamming has a points value of 2, all caps has a points value of 1, etc.
 exports.punishvals = {
 	1: 'warn',
-	2: 'mute',
-	3: 'hourmute',
-	4: 'roomban',
-	5: 'ban'
+	2: 'kick',
+	3: 'mute',
+	4: 'hourmute',
+	5: 'roomban'
 };
 
 //This key is used to deliver requests from Google Spreadsheets. Used by the wifi room.
